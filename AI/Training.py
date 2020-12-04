@@ -1,9 +1,8 @@
 import numpy as np
-from keras.models import Sequential,load_model
-from keras.layers import Dense, Conv2D,MaxPooling2D,Dropout,Flatten
-from keras.utils import np_utils
-from keras.wrappers.scikit_learn import KerasClassifier
-from keras.callbacks import ModelCheckpoint
+from tensorflow.keras.models import Sequential,load_model
+from tensorflow.keras.layers import Dense, Conv2D,MaxPooling2D,Dropout,Flatten
+from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
+from tensorflow.keras.callbacks import ModelCheckpoint
 from sklearn.model_selection import KFold,cross_val_score,train_test_split
 import matplotlib.image as Image
 import PIL.Image as Image
@@ -29,7 +28,6 @@ y = np.load("y.npy")
 predx = Image.open("495.png").resize(((150,112)))
 predx= np.asarray(predx).reshape(1,112,150,3)
 
-y = np_utils.to_categorical(y)
 
 def create_model():
     model = Sequential()
