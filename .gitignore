@@ -8,3 +8,6 @@ Game/ProjectSettings/*
 Game/Temp/*
 Traindata/*
 *.dll
+.vscode/*
+.vscode/settings.json
+.vscode/settings.json
