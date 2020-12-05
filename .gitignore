@@ -8,3 +8,5 @@ Game/ProjectSettings/*
 Game/Temp/*
 Traindata/*
 *.dll
+.vscode/*
+*.hdf5
