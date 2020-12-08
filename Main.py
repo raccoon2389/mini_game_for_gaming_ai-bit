@@ -1,17 +1,18 @@
 import numpy as np # 배열 라이브러리
 from PIL import ImageGrab # 스크린 캡처 라이브러리
-from keras.models import load_model
+from tensorflow.keras.models import load_model
+
 import cv2
 import keyboard
 import matplotlib.pyplot as plt
 import pyautogui
 import time
 
-model = load_model('./B_model/--88--0.0191.hdf5')
+model = load_model("AI\model\--30--0.0843.hdf5")
 while (keyboard.is_pressed('esc')==0): # 무한 반복
     screen = ImageGrab.grab().resize(((150,112))) # 스크린을 캡쳐하여 변수에 저장
     screen1 = np.array(screen) # 이미지를 배열로 변환
-    cv2.imshow("game",cv2.cvtColor(screen1, cv2.COLOR_BGR2RGB))
+    # cv2.imshow("game",cv2.cvtColor(screen1, cv2.COLOR_BGR2RGB))
     # cv2.waitKey(0)
     # cv2.destroyAllWindows() 
     # b, g, r = cv2.split(screen1)
