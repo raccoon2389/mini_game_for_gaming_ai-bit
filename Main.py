@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import pyautogui
 import time
 
-model = load_model("AI\model\--30--0.0843.hdf5")
+model = load_model("AI\model\--50--0.1524.hdf5")
 while (keyboard.is_pressed('esc')==0): # 무한 반복
     screen = ImageGrab.grab().resize(((150,112))) # 스크린을 캡쳐하여 변수에 저장
     screen1 = np.array(screen) # 이미지를 배열로 변환
