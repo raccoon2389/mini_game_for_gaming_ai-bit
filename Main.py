@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import pyautogui
 import time
 
-model = load_model("AI\model\--50--0.1524.hdf5")
+model = load_model("AI\model\epoch200\--96--0.0539.hdf5")
 while (keyboard.is_pressed('esc')==0): # 무한 반복
     screen = ImageGrab.grab().resize(((150,112))) # 스크린을 캡쳐하여 변수에 저장
     screen1 = np.array(screen) # 이미지를 배열로 변환
@@ -16,8 +16,8 @@ while (keyboard.is_pressed('esc')==0): # 무한 반복
     # cv2.waitKey(0)
     # cv2.destroyAllWindows() 
     # b, g, r = cv2.split(screen1)
-    # im2 =cv2.merge([r,g,b])
 
+    # im2 =cv2.merge([r,g,b])
     # plt.imshow(im2)
     # plt.show()
 
