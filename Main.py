@@ -8,9 +8,10 @@ import matplotlib.pyplot as plt
 import pyautogui
 import time
 
-model = load_model("AI\model\epoch200\--96--0.0539.hdf5")
+model = load_model("AI\model\epoch200\--98--0.0538.hdf5")
 while (keyboard.is_pressed('esc')==0): # 무한 반복
-    screen = ImageGrab.grab().resize(((150,112))) # 스크린을 캡쳐하여 변수에 저장
+    screen = ImageGrab.grab()
+    screen = screen.crop([0,35,1920,1115]).resize(((150,112))) # 스크린을 캡쳐하여 변수에 저장
     screen1 = np.array(screen) # 이미지를 배열로 변환
     # cv2.imshow("game",cv2.cvtColor(screen1, cv2.COLOR_BGR2RGB))
     # cv2.waitKey(0)
