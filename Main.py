@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import pyautogui
 import time
 
-model = load_model("AI\model\epoch200\--98--0.0538.hdf5")
+model = load_model("AI\model\epoch200\--98--0.0451.hdf5")
 while (keyboard.is_pressed('esc')==0): # 무한 반복
     screen = ImageGrab.grab()
     screen = screen.crop([0,35,1920,1115]).resize(((150,112))) # 스크린을 캡쳐하여 변수에 저장
@@ -26,7 +26,7 @@ while (keyboard.is_pressed('esc')==0): # 무한 반복
     x = np.asarray(screen).reshape(1,112,150,3) # 이미지를 배열로 변환
     out = model.predict(x/255.)
     command = out.argmax()+1
-    print(command) 
+    print(f"Input : {command} ") 
     key_new = 5
     if key_new != command:
         pyautogui.keyUp('down')
