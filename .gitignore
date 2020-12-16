@@ -10,3 +10,4 @@ Traindata/*
 *.dll
 .vscode/*
 *.hdf5
+Traindata2/*
